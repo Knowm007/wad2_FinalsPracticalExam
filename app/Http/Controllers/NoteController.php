@@ -6,14 +6,14 @@ use Illuminate\Http\Request;
 
 class NoteController extends Controller
 {
-  
+    
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
         $notes = auth()->user()->notes;
-    return view('notes.index', compact('notes'));
+        return view('notes.index', compact('notes'));
 
     }
 
